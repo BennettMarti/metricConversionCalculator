@@ -1,0 +1,362 @@
+#include <iostream>
+
+        int main(){
+        int conversionPicker; //This is to choose what calculator you want to use
+        double metricUnit;
+        double imperialUnit;
+        double inchesUnit;
+        double feetUnit;
+        double milesUnit;
+        int imperialToMetric;
+        double cupUnit;
+        double pintUnit;
+        double quartUnit;
+        double gallonUnit;
+        double ounceUnit;
+        double poundUnit;
+        double tonUnit;
+
+
+        std::cout << "Choose a conversion: \n";
+        std::cout << "1 = Metric unit converted to other Metric unit\n";
+        std::cout << "2 = Imperial unit converted to a Metric unit\n";
+        std::cin >> conversionPicker;
+
+
+
+
+        if(conversionPicker == 1){
+        std::cout << "What metric unit are you trying to convert to which ever other metric unit?\n";
+        std::cout << "Your imput should look something like this: 3 cm to km";
+        std::cin >> metricUnit;
+        }
+
+    
+
+
+
+
+        while(conversionPicker == 2){
+            std::cout << "What mesurement are you using?\n";
+            std::cout << "1 = Inches   4 = Cup      8 = Ounces\n";
+            std::cout << "2 = Feet     5 = Pint     9 = Pounds\n";
+            std::cout << "3 = Miles    6 = Quart   10 = Imperial Tons\n";
+            std::cout << "             7 = Gallon\n";
+            std::cin >> imperialUnit;
+
+
+        if(imperialUnit == 1){
+            std::cout << "Enter mesurement in Inches: ";
+            std::cin >> inchesUnit;
+            std::cout << "Enter metric conversion: \n";
+            std::cout << "1 = mm\n";
+            std::cout << "2 = cm\n";
+            std::cout << "3 = M\n";
+            std::cout << "4 = km\n";
+            std::cin >> imperialToMetric;
+        }
+
+     else if(imperialUnit == 1 && imperialToMetric == 1){
+        int inTomm = inchesUnit * 25.4;
+            std::cout << inchesUnit << " Inches is " << inTomm << " Millimeters\n";
+             return inTomm;
+        }
+   else  if(imperialUnit == 1 && imperialToMetric == 2){
+        int inTomm = inchesUnit * 2.54;
+            std::cout << inchesUnit << " Inches is " << inTomm << " Centimeters\n";
+                return inTomm;
+        }
+
+       else if(imperialUnit == 1 && imperialToMetric == 3){
+        int inTomm = inchesUnit * 0.0254;
+            std::cout << inchesUnit << " Inches is " << inTomm << " Meters\n";
+            return inTomm;
+        }
+
+       else if(imperialUnit == 1 && imperialToMetric == 4){
+        int inTomm = inchesUnit * 2.54e-5;
+            std::cout << inchesUnit << " Inches is " << inTomm << " Kilometers\n";
+            return inTomm;
+        }
+
+
+
+
+
+
+    if(imperialUnit == 2){
+            std::cout << "Enter mesurement in Feet: ";
+            std::cin >> feetUnit;
+            std::cout << "Enter metric conversion: \n";
+            std::cout << "1 = mm\n";
+            std::cout << "2 = cm\n";
+            std::cout << "3 = M\n";
+            std::cout << "4 = km\n";
+            std::cin >> imperialToMetric;
+        }
+
+        //This starts the mesurement for feet
+
+        if(imperialUnit == 2 && imperialToMetric == 1){
+        int inTomm = feetUnit * 304.8;
+            std::cout << feetUnit << " Feet is " << inTomm << " Millimeters\n";
+            return inTomm;
+        }
+    if(imperialUnit == 2 && imperialToMetric == 2){
+        int inTomm = feetUnit * 30.48;
+            std::cout << feetUnit << " Feet is " << inTomm << " Centimeters\n";
+            return inTomm;
+        }
+
+        if(imperialUnit == 2 && imperialToMetric == 3){
+        int inTomm = feetUnit * 0.3048;
+            std::cout << feetUnit << " Feet is " << inTomm << " Meters\n";
+            return inTomm;
+        }
+    if(imperialUnit == 2 && imperialToMetric == 4){
+        int inTomm = feetUnit * 0.0003048;
+            std::cout << feetUnit << " Feet is approximately " << inTomm << " Kilometers\n";
+            return inTomm;}
+        
+        
+    // This ends the mesurement for feet
+
+
+    // This starts the mesurement for miles
+    if(imperialUnit == 3){
+            std::cout << "Enter mesurement in Miles: ";
+            std::cin >> milesUnit;
+            std::cout << "Enter metric conversion: \n";
+            std::cout << "1 = mm\n";
+            std::cout << "2 = cm\n";
+            std::cout << "3 = M\n";
+            std::cout << "4 = km\n";
+            std::cin >> imperialToMetric;
+        }
+            if(imperialUnit == 3 && imperialToMetric == 1){
+        int inTomm = milesUnit * 1609344;
+            std::cout << milesUnit << " Miles is " << inTomm << " Millimeters\n";
+            return inTomm;
+        }
+    if(imperialUnit == 3 && imperialToMetric == 2){
+        int inTomm = milesUnit * 160934.4;
+            std::cout << milesUnit << " Miles is " << inTomm << " Centimeters\n";
+            return inTomm;
+        }
+
+        if(imperialUnit == 3 && imperialToMetric == 3){
+        int inTomm = milesUnit * 1609.344;
+            std::cout << milesUnit << " Miles is " << inTomm << " Meters\n";
+            return inTomm;
+        }
+    if(imperialUnit == 3 && imperialToMetric == 4){
+        int inTomm = milesUnit * 1.609;
+            std::cout << milesUnit << " Miles is approximately " << inTomm << " Kilometers\n";
+            return inTomm;}
+        
+
+
+    // This ends the mesurement for miles
+
+
+
+    if(imperialUnit == 4){
+            std::cout << "Enter mesurement in Cups: ";
+            std::cin >> cupUnit;
+            std::cout << "Enter metric conversion: \n";
+            std::cout << "1 = ml\n";
+            std::cout << "2 = cl\n";
+            std::cout << "3 = L\n";
+            std::cin >> imperialToMetric;
+        }
+            if(imperialUnit == 4 && imperialToMetric == 1){
+        int inTomm = cupUnit * 236.588;
+            std::cout << cupUnit << " Cups is " << inTomm << " Millileters\n";
+            return inTomm;
+        }
+    if(imperialUnit == 4 && imperialToMetric == 2){
+        int inTomm = cupUnit * 23.658;
+            std::cout << milesUnit << " Cups is " << inTomm << " Centileters\n";
+            return inTomm;
+        }
+
+        if(imperialUnit == 4 && imperialToMetric == 3){
+        int inTomm = cupUnit * 0.236588;
+            std::cout << milesUnit << " Cups is " << inTomm << " Liters\n";
+            return inTomm;
+        }
+
+
+
+    if(imperialUnit == 5){
+            std::cout << "Enter mesurement in Pints: ";
+            std::cin >> pintUnit;
+            std::cout << "Enter metric conversion: \n";
+            std::cout << "1 = ml\n";
+            std::cout << "2 = cl\n";
+            std::cout << "3 = L\n";
+            std::cin >> imperialToMetric;
+        }
+            if(imperialUnit == 5 && imperialToMetric == 1){
+        int inTomm = pintUnit * 473.176;
+            std::cout << pintUnit << " Pints is " << inTomm << " Millileters\n";
+            return inTomm;
+        }
+    if(imperialUnit == 5 && imperialToMetric == 2){
+        int inTomm = pintUnit * 47.317;
+            std::cout << pintUnit << " Pints is " << inTomm << " Centileters\n";
+            return inTomm;
+        }
+
+        if(imperialUnit == 5 && imperialToMetric == 3){
+        int inTomm = pintUnit * 0.473;
+            std::cout << pintUnit << " Pints is " << inTomm << " Liters\n";
+            return inTomm;
+        }
+
+
+
+    if(imperialUnit == 6){
+            std::cout << "Enter mesurement in Quarts: ";
+            std::cin >> quartUnit;
+            std::cout << "Enter metric conversion: \n";
+            std::cout << "1 = ml\n";
+            std::cout << "2 = cl\n";
+            std::cout << "3 = L\n";
+            std::cin >> imperialToMetric;
+        }
+            if(imperialUnit == 6 && imperialToMetric == 1){
+        int inTomm = quartUnit * 946.353;
+            std::cout << quartUnit << " Quarts is " << inTomm << " Millileters\n";
+            return inTomm;
+        }
+    if(imperialUnit == 6 && imperialToMetric == 2){
+        int inTomm = quartUnit * 94.635;
+            std::cout << quartUnit << " Quarts is " << inTomm << " Centileters\n";
+            return inTomm;
+        }
+
+        if(imperialUnit == 6 && imperialToMetric == 3){
+        int inTomm = quartUnit * 0.9463;
+            std::cout << quartUnit << " Quarts is " << inTomm << " Liters\n";
+            return inTomm;
+        }
+
+
+
+
+    if(imperialUnit == 7){
+            std::cout << "Enter mesurement in Gallons: ";
+            std::cin >> gallonUnit;
+            std::cout << "Enter metric conversion: \n";
+            std::cout << "1 = ml\n";
+            std::cout << "2 = cl\n";
+            std::cout << "3 = L\n";
+            std::cin >> imperialToMetric;
+        }
+            if(imperialUnit == 7 && imperialToMetric == 1){
+        int inTomm = quartUnit * 3785.41;
+            std::cout << gallonUnit << " Gallons is " << inTomm << " Millileters\n";
+            return inTomm;
+        }
+    if(imperialUnit == 7 && imperialToMetric == 2){
+        int inTomm = gallonUnit * 378.541;
+            std::cout << gallonUnit << " Gallons is " << inTomm << " Centileters\n";
+            return inTomm;
+        }
+
+        if(imperialUnit == 7 && imperialToMetric == 3){
+        int inTomm = gallonUnit * 3.7854;
+            std::cout << gallonUnit << " Gallons is " << inTomm << " Liters\n";
+            return inTomm;
+        }
+
+    
+
+
+
+
+        
+    if(imperialUnit == 8){
+            std::cout << "Enter mesurement in Ounces: ";
+            std::cin >> ounceUnit;
+            std::cout << "Enter metric conversion: \n";
+            std::cout << "1 = g\n";
+            std::cout << "2 = kg\n";
+            std::cout << "3 = MT\n";
+            std::cin >> imperialToMetric;
+        }
+            if(imperialUnit == 8 && imperialToMetric == 1){
+        int inTomm = ounceUnit * 28.3493;
+            std::cout << ounceUnit << " Ounces is " << inTomm << " Grams\n";
+            return inTomm;
+        }
+    if(imperialUnit == 8 && imperialToMetric == 2){
+        int inTomm = ounceUnit * 0.0283495;
+            std::cout << ounceUnit << " Ounces is " << inTomm << " Kilograms\n";
+            return inTomm;
+        }
+
+        if(imperialUnit == 8 && imperialToMetric == 3){
+        int inTomm = ounceUnit * 2.835e-5;
+            std::cout << ounceUnit << " Ounces is " << inTomm << " Metric Tons\n";
+            return inTomm;
+        }
+
+
+        if(imperialUnit == 9){
+            std::cout << "Enter mesurement in Pounds: ";
+            std::cin >> poundUnit;
+            std::cout << "Enter metric conversion: \n";
+            std::cout << "1 = g\n";
+            std::cout << "2 = kg\n";
+            std::cout << "3 = MT\n";
+            std::cin >> imperialToMetric;
+        }
+            if(imperialUnit == 9 && imperialToMetric == 1){
+                int inTomm = poundUnit * 453.592;
+                    std::cout << poundUnit << " Pounds is " << inTomm << " Grams\n";
+                        return inTomm;
+        }
+              if(imperialUnit == 9 && imperialToMetric == 2){
+                  int inTomm = poundUnit * 0.453592;
+                       std::cout << poundUnit << " Pounds is " << inTomm << " Kilograms\n";
+                            return inTomm;
+        }
+
+        if(imperialUnit == 9 && imperialToMetric == 3){
+                 int inTomm = poundUnit * 0.000453592;
+                         std::cout << ounceUnit << " Pounds is " << inTomm << " Metric Tons\n";
+                             return inTomm;
+        }
+
+
+    if(imperialUnit == 10){
+            std::cout << "Enter mesurement in Imperial Tons: ";
+            std::cin >> tonUnit;
+            std::cout << "Enter metric conversion: \n";
+            std::cout << "1 = g\n";
+            std::cout << "2 = kg\n";
+            std::cout << "3 = MT\n";
+            std::cin >> imperialToMetric;
+        }
+            if(imperialUnit == 10 && imperialToMetric == 1){
+        int inTomm = tonUnit * 907185;
+            std::cout << tonUnit << " Imperial Tons is " << inTomm << " Grams\n";
+            return inTomm;
+        }
+    if(imperialUnit == 10 && imperialToMetric == 2){
+        int inTomm = tonUnit * 907.185;
+            std::cout << tonUnit << " Imperial Tons is " << inTomm << " Kilograms\n";
+            return inTomm;
+        }
+
+        if(imperialUnit == 10 && imperialToMetric == 3){
+        int inTomm = tonUnit * 0.907185;
+            std::cout << tonUnit << " Imperial Tons is approxamately " << inTomm << " Metric Tons\n";
+            return inTomm;
+        }
+
+         } 
+          return 0;  
+        }
